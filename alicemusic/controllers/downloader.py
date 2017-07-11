@@ -43,7 +43,7 @@ class DownloadController(object):
         print('pre transcode')
         abs_output_file = os.path.join(
                 settings.OGG_DIR, output_file)
-        sh.ffmpeg(
+        sh.avconv(
             '-i', filepath, '-vn',
             '-acodec', 'copy', abs_output_file)
         print('post transcode')
