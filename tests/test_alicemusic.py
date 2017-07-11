@@ -7,7 +7,7 @@ import pytest
 
 from click.testing import CliRunner
 
-from alicemusic import alicemusic
+from alicemusic.bootstrap import app
 from alicemusic import cli
 
 
