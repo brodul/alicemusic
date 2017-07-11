@@ -10,5 +10,6 @@ downloader = Blueprint('downloader', __name__, url_prefix='/downloader')
 
 @downloader.route('/', methods=['GET', 'POST'])
 def index():
-    DownloadController.process(request)
+    dc = DownloadController()
+    dc.process(request)
     return 'OK'
